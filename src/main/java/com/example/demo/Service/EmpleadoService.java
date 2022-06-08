@@ -11,14 +11,17 @@ import java.util.ArrayList;
 public class EmpleadoService {
     @Autowired
     EmpleadoRepositories empleadoRepositories;
-
-
     public ArrayList<EmpleadoModel> ObtenerEmpleados(){
         return(ArrayList<EmpleadoModel>) empleadoRepositories.findAll(); /// Retornar toda la lista de l tabla
     }
 
     public EmpleadoModel Guardar(EmpleadoModel empleadoModel){
         return empleadoRepositories.save(empleadoModel); ///Guardar los datos
+    }
+
+    public Boolean validarFecha(String fechaEntrada){
+        System.out.println("Fecha de entrada es" +fechaEntrada);
+        return false;
     }
 
 }

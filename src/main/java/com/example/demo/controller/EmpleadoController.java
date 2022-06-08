@@ -21,6 +21,7 @@ public class EmpleadoController {
 
     @PostMapping()// Metodo Post
     public EmpleadoModel postEmpleado(@RequestBody EmpleadoModel empleadoModel){
+
         return this.empleadoService.Guardar(empleadoModel);
     }
 }

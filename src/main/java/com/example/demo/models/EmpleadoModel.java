@@ -100,6 +100,4 @@ public class EmpleadoModel {
     public void setSalario(Double salario) {
         Salario = salario;
     }
-
-
 }
