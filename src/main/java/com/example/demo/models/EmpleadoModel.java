@@ -21,9 +21,9 @@ public class EmpleadoModel {
     @Column(name = "Numero_Documento")
     private String Numero_Documento;
     @Column(name = "Fecha_Nacimiento")
-    private Date Fecha_Nacimiento;
+    private String Fecha_Nacimiento;
     @Column(name = "Fecha_Vinculacion")
-    private Date Fecha_Vinculacion;
+    private String Fecha_Vinculacion;
     @Column(name = "Cargo")
     private String Cargo;
     @Column(name = "Salario")
@@ -69,19 +69,21 @@ public class EmpleadoModel {
         Numero_Documento = numero_Documento;
     }
 
-    public Date getFecha_Nacimiento() {
-        return Fecha_Nacimiento;
+    public String getFecha_Nacimiento(){
+            return Fecha_Nacimiento;
     }
 
-    public void setFecha_Nacimiento(Date fecha_Nacimiento) {
-        Fecha_Nacimiento = fecha_Nacimiento;
-    }
+    public void setFecha_Nacimiento(String fecha_Nacimiento) {
 
-    public Date getFecha_Vinculacion() {
+           Fecha_Nacimiento = fecha_Nacimiento;
+
+     }
+
+    public String getFecha_Vinculacion() {
         return Fecha_Vinculacion;
     }
 
-    public void setFecha_Vinculacion(Date fecha_Vinculacion) {
+    public void setFecha_Vinculacion(String fecha_Vinculacion) {
         Fecha_Vinculacion = fecha_Vinculacion;
     }
 

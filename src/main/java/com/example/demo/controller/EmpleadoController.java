@@ -22,6 +22,15 @@ public class EmpleadoController {
     @PostMapping()// Metodo Post
     public EmpleadoModel postEmpleado(@RequestBody EmpleadoModel empleadoModel){
 
-        return this.empleadoService.Guardar(empleadoModel);
+        Boolean edadMayor = empleadoService.mayorEdad(empleadoModel.getFecha_Nacimiento());
+        Boolean camposValidos =empleadoService.atributosCompletos(empleadoModel);
+        Boolean esValidoNacimiento = empleadoService.validarFecha(empleadoModel.getFecha_Nacimiento());
+        Boolean esValidoVinculacion = empleadoService.validarFecha(empleadoModel.getFecha_Vinculacion());
+        if(edadMayor && esValidoNacimiento && esValidoVinculacion && camposValidos ){
+            System.out.println();
+            return empleadoService.Guardar(empleadoModel);
+        }
+
+        return null;
     }
 }
