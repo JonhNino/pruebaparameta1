@@ -26,8 +26,12 @@ public class EmpleadoController {
         Boolean camposValidos =empleadoService.atributosCompletos(empleadoModel);
         Boolean esValidoNacimiento = empleadoService.validarFecha(empleadoModel.getFecha_Nacimiento());
         Boolean esValidoVinculacion = empleadoService.validarFecha(empleadoModel.getFecha_Vinculacion());
+        System.out.println(edadMayor);
+        System.out.println(camposValidos);
+        System.out.println(esValidoNacimiento);
+        System.out.println(esValidoVinculacion);
         if(edadMayor && esValidoNacimiento && esValidoVinculacion && camposValidos ){
-            System.out.println();
+            System.out.println("estoy entrando el if");
             return empleadoService.Guardar(empleadoModel);
         }
 
