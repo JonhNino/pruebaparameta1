@@ -91,10 +91,11 @@ public class EmpleadoService {
         String matrizFecha[] = fecha_Vinculacion.split("-");
 
         ArrayList<String> vinculacionTime = new ArrayList<String>(); //Almacenar año y fecha de resultado
-        int temp=((date.getYear()+1900)-Integer.parseInt(matrizFecha[0]));
-        vinculacionTime.add(String.valueOf(temp));
-        System.out.println(vinculacionTime.get(0)); /// Almacenado año Vinculacion
+
+        ///System.out.println(vinculacionTime.get(0)); /// Almacenado año Vinculacion
         if((date.getMonth()+1)<=Integer.parseInt(matrizFecha[1])) {
+            int temp=((date.getYear()+1900)-Integer.parseInt(matrizFecha[0])-1);
+            vinculacionTime.add(String.valueOf(temp));
             int temp1 = (12 - Integer.parseInt(matrizFecha[1]) + (date.getMonth() + 1));
             if(temp1==12){
                 temp1=0;
@@ -102,6 +103,8 @@ public class EmpleadoService {
             vinculacionTime.add(String.valueOf(temp1));
             ///System.out.println(vinculacionTime.get(1)); /// Almacenado año Vinculacion
         }else{
+            int temp=((date.getYear()+1900)-Integer.parseInt(matrizFecha[0]));
+            vinculacionTime.add(String.valueOf(temp));
             int temp1 = ((date.getMonth() + 1-Integer.parseInt(matrizFecha[1])));
             vinculacionTime.add(String.valueOf(temp1));
            //// System.out.println(vinculacionTime.get(1)); /// Almacenado año Vinculacion
@@ -117,10 +120,11 @@ public class EmpleadoService {
         String matrizFecha[] = fecha_Nacimiento.split("-");
 
         ArrayList<String> vinculacionTime = new ArrayList<String>(); //Almacenar año y fecha de resultado
-        int temp=((date.getYear()+1900)-Integer.parseInt(matrizFecha[0]));
-        vinculacionTime.add(String.valueOf(temp));
-        System.out.println("Años Empleados" +vinculacionTime.get(0)); /// Almacenado año Vinculacion
+
+       /// System.out.println("Años Empleados" +vinculacionTime.get(0)); /// Almacenado año Vinculacion
         if((date.getMonth()+1)<=Integer.parseInt(matrizFecha[1])) {
+            int temp=((date.getYear()+1900)-Integer.parseInt(matrizFecha[0])-1);
+            vinculacionTime.add(String.valueOf(temp));
             int temp1 = (12 - Integer.parseInt(matrizFecha[1]) + (date.getMonth() + 1));
             if(temp1==12){
                 temp1=0;
@@ -194,6 +198,8 @@ public class EmpleadoService {
             }
             ///System.out.println("Meses Empleados"+vinculacionTime.get(1)); /// Almacenado año Vinculacion
         }else{
+            int temp=((date.getYear()+1900)-Integer.parseInt(matrizFecha[0]));
+            vinculacionTime.add(String.valueOf(temp));
             int temp1 = ((date.getMonth() + 1-Integer.parseInt(matrizFecha[1])));
             vinculacionTime.add(String.valueOf(temp1));
             ///Switch Dias
