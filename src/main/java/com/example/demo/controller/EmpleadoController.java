@@ -23,7 +23,7 @@ public class EmpleadoController {
     @PostMapping()// Metodo Post
     public SalidaModel postEmpleado(@RequestBody EmpleadoModel empleadoModel){
 
-        String edadEmpleado = empleadoService.edadEmpleado(empleadoModel.getFecha_Nacimiento());
+        ArrayList<String>  edadEmpleado = empleadoService.edadEmpleado(empleadoModel.getFecha_Nacimiento());
         ArrayList<String> tiempoVinculacion = empleadoService.tiempoVinculacion(empleadoModel.getFecha_Vinculacion());
         Boolean edadMayor = empleadoService.mayorEdad(empleadoModel.getFecha_Nacimiento());
         Boolean camposValidos =empleadoService.atributosCompletos(empleadoModel);
@@ -42,8 +42,8 @@ public class EmpleadoController {
             salidaModel.setFecha_Vinculacion(empleadoModel.getFecha_Vinculacion());
             salidaModel.setCargo(empleadoModel.getCargo());
             salidaModel.setSalario(empleadoModel.getSalario());
-            salidaModel.setTiempo_Vinculacion("Años "+tiempoVinculacion.get(0)+"Meses "+tiempoVinculacion.get(1));
-            salidaModel.setEdad_Empleado(edadEmpleado);
+            salidaModel.setTiempo_Vinculacion(tiempoVinculacion.get(0)+" Años "+tiempoVinculacion.get(1)+" Meses ");
+            salidaModel.setEdad_Empleado(edadEmpleado.get(0)+" Años "+edadEmpleado.get(1)+" Meses "+edadEmpleado.get(2)+" Dias ");
             empleadoService.Guardar(empleadoModel);
             salidaModel.setId(empleadoModel.getId());
             return salidaModel;

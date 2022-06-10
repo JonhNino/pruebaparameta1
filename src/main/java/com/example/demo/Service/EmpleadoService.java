@@ -100,18 +100,18 @@ public class EmpleadoService {
                 temp1=0;
             }
             vinculacionTime.add(String.valueOf(temp1));
-            System.out.println(vinculacionTime.get(1)); /// Almacenado año Vinculacion
+            ///System.out.println(vinculacionTime.get(1)); /// Almacenado año Vinculacion
         }else{
             int temp1 = ((date.getMonth() + 1-Integer.parseInt(matrizFecha[1])));
             vinculacionTime.add(String.valueOf(temp1));
-            System.out.println(vinculacionTime.get(1)); /// Almacenado año Vinculacion
+           //// System.out.println(vinculacionTime.get(1)); /// Almacenado año Vinculacion
         }
         //ArrayList<String> Respuesta = new ArrayList<>();
         //Respuesta.add(vinculacionTime.get(0));
         return vinculacionTime;
     }
 
-    public String edadEmpleado(String fecha_Nacimiento){
+    public ArrayList<String> edadEmpleado(String fecha_Nacimiento){
         SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date(System.currentTimeMillis());
         String matrizFecha[] = fecha_Nacimiento.split("-");
@@ -126,14 +126,204 @@ public class EmpleadoService {
                 temp1=0;
             }
             vinculacionTime.add(String.valueOf(temp1));
-            System.out.println("Meses Empleados"+vinculacionTime.get(1)); /// Almacenado año Vinculacion
+            ///Switch Dias
+            switch (matrizFecha[1]){
+                case "1":{
+                    int tempDay = 0;
+                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "2":{
+                    int tempDay = 0;
+                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "3":{
+                    int tempDay = 0;
+                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "4":{
+                    int tempDay = 0;
+                    Meses30( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses30( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "5":{
+                    int tempDay = 0;
+                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "6":{
+                    int tempDay = 0;
+                    Meses30( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses30( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "7":{
+                    int tempDay = 0;
+                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "8":{
+                    int tempDay = 0;
+                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+
+                }
+                case "9":{
+                    int tempDay = 0;
+                    Meses30( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses30( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "10":{
+                    int tempDay = 0;
+                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "11":{
+                    int tempDay = 0;
+                    Meses30( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses30( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+
+                }
+                case "12":{
+                    int tempDay = 0;
+                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+
+            }
+            ///System.out.println("Meses Empleados"+vinculacionTime.get(1)); /// Almacenado año Vinculacion
         }else{
             int temp1 = ((date.getMonth() + 1-Integer.parseInt(matrizFecha[1])));
             vinculacionTime.add(String.valueOf(temp1));
-            System.out.println("Meses Empleados"+vinculacionTime.get(1)); /// Almacenado año Vinculacion
+            ///Switch Dias
+            switch (matrizFecha[1]){
+                case "1":{
+                    int tempDay = 0;
+                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "2":{
+                    int tempDay = 0;
+                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "3":{
+                    int tempDay = 0;
+                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "4":{
+                    int tempDay = 0;
+                    Meses30( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses30( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "5":{
+                    int tempDay = 0;
+                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "6":{
+                    int tempDay = 0;
+                    Meses30( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses30( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "7":{
+                    int tempDay = 0;
+                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "8":{
+                    int tempDay = 0;
+                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+
+                }
+                case "9":{
+                    int tempDay = 0;
+                    Meses30( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses30( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "10":{
+                    int tempDay = 0;
+                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+                case "11":{
+                    int tempDay = 0;
+                    Meses30( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses30( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+
+                }
+                case "12":{
+                    int tempDay = 0;
+                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
+                }
+
+            }
+            ///System.out.println("Meses Empleados"+vinculacionTime.get(1)); /// Almacenado año Vinculacion
         }
 
-        return vinculacionTime.get(0)+vinculacionTime.get(1);
+        return vinculacionTime;
+    }
+
+    ///Espacio para mostrar los dias de nacimiento
+    public static int Meses31(int date, String s, int tempDay){System.out.println("Estoy aqui");
+        if(date<=Integer.parseInt(s)) {
+            tempDay = (31 - Integer.parseInt(s) + date);
+            if(tempDay==31){
+                tempDay=0;
+            }
+            //vinculacionTime.add(String.valueOf(tempDay));
+
+            System.out.println("Dias del Empleado"+tempDay); /// Almacenado año Vinculacion
+        }else{
+            tempDay = ((date-Integer.parseInt(s)));
+            //vinculacionTime.add(String.valueOf(tempDay));
+            System.out.println("Dias del Empleados"+tempDay); /// Almacenado año Vinculacion
+        }
+
+        return tempDay;
+
+    }
+
+    public static int Meses30(int date, String s, int tempDay){System.out.println("Estoy aqui");
+        if(date<=Integer.parseInt(s)) {
+            tempDay = (31 - Integer.parseInt(s) + date);
+            if(tempDay==31){
+                tempDay=0;
+            }
+            //vinculacionTime.add(String.valueOf(tempDay));
+
+            System.out.println("Dias del Empleado"+tempDay); /// Almacenado año Vinculacion
+        }else{
+            tempDay = ((date-Integer.parseInt(s)));
+            //vinculacionTime.add(String.valueOf(tempDay));
+            System.out.println("Dias del Empleados"+tempDay); /// Almacenado año Vinculacion
+        }
+
+        return tempDay;
+
+    }
+
+    public static int Meses28(int date, String s, int tempDay){System.out.println("Estoy aqui");
+        if(date<=Integer.parseInt(s)) {
+            tempDay = (31 - Integer.parseInt(s) + date);
+            if(tempDay==31){
+                tempDay=0;
+            }
+            //vinculacionTime.add(String.valueOf(tempDay));
+
+            System.out.println("Dias del Empleado"+tempDay); /// Almacenado año Vinculacion
+        }else{
+            tempDay = ((date-Integer.parseInt(s)));
+            //vinculacionTime.add(String.valueOf(tempDay));
+            System.out.println("Dias del Empleados"+tempDay); /// Almacenado año Vinculacion
+        }
+
+        return tempDay;
+
     }
 
 }
