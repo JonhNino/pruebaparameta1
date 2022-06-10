@@ -47,7 +47,7 @@ public class EmpleadoService {
                 empleadoModel.getCargo().equals("") ||
                 empleadoModel.getSalario().equals("")) {
 
-            System.out.println("Algun Campo es Vacio");
+           /// System.out.println("Algun Campo es Vacio");
             return false;
         }
         return true;
@@ -61,8 +61,8 @@ public class EmpleadoService {
         // System.out.println(date.getYear()+1900);
         // System.out.println(matrizFecha[0]);
         if ((date.getYear() + 1900 - Integer.parseInt(matrizFecha[0]) > 18)) {
-            System.out.println("Es Mayor de Edad");
-            System.out.println(date.getMonth() + matrizFecha[1]);
+          ///  System.out.println("Es Mayor de Edad");
+           /// System.out.println(date.getMonth() + matrizFecha[1]);
             return true;
 
         } else {
@@ -93,7 +93,7 @@ public class EmpleadoService {
         ArrayList<String> vinculacionTime = new ArrayList<String>(); //Almacenar año y fecha de resultado
 
         ///System.out.println(vinculacionTime.get(0)); /// Almacenado año Vinculacion
-        if((date.getMonth()+1)<=Integer.parseInt(matrizFecha[1])) {
+        if((date.getMonth()+1)<Integer.parseInt(matrizFecha[1])) {
             int temp=((date.getYear()+1900)-Integer.parseInt(matrizFecha[0])-1);
             vinculacionTime.add(String.valueOf(temp));
             int temp1 = (12 - Integer.parseInt(matrizFecha[1]) + (date.getMonth() + 1));
@@ -122,7 +122,7 @@ public class EmpleadoService {
         ArrayList<String> vinculacionTime = new ArrayList<String>(); //Almacenar año y fecha de resultado
 
        /// System.out.println("Años Empleados" +vinculacionTime.get(0)); /// Almacenado año Vinculacion
-        if((date.getMonth()+1)<=Integer.parseInt(matrizFecha[1])) {
+        if((date.getMonth()+1)<Integer.parseInt(matrizFecha[1])) {
             int temp=((date.getYear()+1900)-Integer.parseInt(matrizFecha[0])-1);
             vinculacionTime.add(String.valueOf(temp));
             int temp1 = (12 - Integer.parseInt(matrizFecha[1]) + (date.getMonth() + 1));
@@ -139,7 +139,7 @@ public class EmpleadoService {
                 }
                 case "2":{
                     int tempDay = 0;
-                    Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
+                    Meses28( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay);
                     vinculacionTime.add(String.valueOf(Meses31( date.getDate(), String.valueOf(Integer.parseInt(matrizFecha[2])),tempDay)));
                 }
                 case "3":{
@@ -275,7 +275,7 @@ public class EmpleadoService {
     }
 
     ///Espacio para mostrar los dias de nacimiento
-    public static int Meses31(int date, String s, int tempDay){System.out.println("Estoy aqui");
+    public static int Meses31(int date, String s, int tempDay){///System.out.println("Estoy aqui");
         if(date<=Integer.parseInt(s)) {
             tempDay = (31 - Integer.parseInt(s) + date);
             if(tempDay==31){
@@ -283,49 +283,49 @@ public class EmpleadoService {
             }
             //vinculacionTime.add(String.valueOf(tempDay));
 
-            System.out.println("Dias del Empleado"+tempDay); /// Almacenado año Vinculacion
+         ///   System.out.println("Dias del Empleado"+tempDay); /// Almacenado año Vinculacion
         }else{
             tempDay = ((date-Integer.parseInt(s)));
             //vinculacionTime.add(String.valueOf(tempDay));
-            System.out.println("Dias del Empleados"+tempDay); /// Almacenado año Vinculacion
+           /// System.out.println("Dias del Empleados"+tempDay); /// Almacenado año Vinculacion
         }
 
         return tempDay;
 
     }
 
-    public static int Meses30(int date, String s, int tempDay){System.out.println("Estoy aqui");
+    public static int Meses30(int date, String s, int tempDay){///System.out.println("Estoy aqui");
         if(date<=Integer.parseInt(s)) {
-            tempDay = (31 - Integer.parseInt(s) + date);
-            if(tempDay==31){
+            tempDay = (30 - Integer.parseInt(s) + date);
+            if(tempDay==30){
                 tempDay=0;
             }
             //vinculacionTime.add(String.valueOf(tempDay));
 
-            System.out.println("Dias del Empleado"+tempDay); /// Almacenado año Vinculacion
+           /// System.out.println("Dias del Empleado"+tempDay); /// Almacenado año Vinculacion
         }else{
             tempDay = ((date-Integer.parseInt(s)));
             //vinculacionTime.add(String.valueOf(tempDay));
-            System.out.println("Dias del Empleados"+tempDay); /// Almacenado año Vinculacion
+         ///   System.out.println("Dias del Empleados"+tempDay); /// Almacenado año Vinculacion
         }
 
         return tempDay;
 
     }
 
-    public static int Meses28(int date, String s, int tempDay){System.out.println("Estoy aqui");
+    public static int Meses28(int date, String s, int tempDay){///System.out.println("Estoy aqui");
         if(date<=Integer.parseInt(s)) {
-            tempDay = (31 - Integer.parseInt(s) + date);
-            if(tempDay==31){
+            tempDay = (28 - Integer.parseInt(s) + date);
+            if(tempDay==28){
                 tempDay=0;
             }
             //vinculacionTime.add(String.valueOf(tempDay));
 
-            System.out.println("Dias del Empleado"+tempDay); /// Almacenado año Vinculacion
+          ///  System.out.println("Dias del Empleado"+tempDay); /// Almacenado año Vinculacion
         }else{
             tempDay = ((date-Integer.parseInt(s)));
             //vinculacionTime.add(String.valueOf(tempDay));
-            System.out.println("Dias del Empleados"+tempDay); /// Almacenado año Vinculacion
+          ///  System.out.println("Dias del Empleados"+tempDay); /// Almacenado año Vinculacion
         }
 
         return tempDay;
